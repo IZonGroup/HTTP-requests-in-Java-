@@ -1,0 +1,25 @@
+// Create a new XMLHttpRequest object
+var xhr = new XMLHttpRequest();
+
+// Open a new connection to the server
+x3hr.open('GET', 'https://www.example.com/api/data', true);
+
+// Set the request headers
+xhr.setRequestHeader('Content-Type', 'application/json');
+
+// Send the request
+xhr.send();
+
+// Handle the response
+xhr.onload = function() {
+  if (xhr.status == 200) {
+    // If the request was successful, parse the response data as JSON
+    var data = JSON.parse(xhr.responseText);
+
+    // Do something with the data
+    console.log(data);
+  } else {
+    // If the request was not successful, log the error message
+    console.error('An error occurred: ' + xhr.statusText);
+  }
+};
