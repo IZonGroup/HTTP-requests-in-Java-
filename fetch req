@@ -1,0 +1,14 @@
+// Make the request
+fetch('https://www.example.com/api/data')
+  .then(function(response) {
+    // Parse the response as JSON
+    return response.json();
+  })
+  .then(function(data) {
+    // Do something with the data
+    console.log(data);
+  })
+  .catch(function(error) {
+    // If there was an error, log it
+    console.error(error);
+  });
